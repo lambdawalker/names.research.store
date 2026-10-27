@@ -197,3 +197,9 @@ See [the design](docs/superpowers/specs/2026-10-26-storage-service-design.md) an
 Software: MIT. Source documents and datasets retain their own licensing terms.
 
 Root research orchestration persistence, origin subjects, and exact canonical identity lookup are documented in [Root research tasks](docs/root-research-tasks.md). Validation-only consumers can import `@lambdawalker/names-research-store/contracts`; this entry exports domain schemas, task schemas, inputs, and form identity helpers without SQLite, HTTP, or Neo4j imports.
+
+## Managed credential bootstrap
+
+`config.default.yaml` supplies the local host/port/data path and optional non-secret graph connection. With `NAMES_CONTROL_TOKEN` set by the orchestrator, the API starts without an application token. Authenticated `POST /v1/credentials` sets/rotates its in-memory application token; `{ "token": null }` locks it again. The control credential is separate from the storage API token, is never returned, and is generated fresh for each managed process. Application calls still use `/v1/operations/...` with the seeded API token. Managed mode binds to loopback and rejects browser-origin requests.
+
+The orchestrator unlocks its encrypted credential vault at startup, launches this process and injects the storage token. No storage API token belongs in YAML. The optional `neo4j` vault entry supplies the graph password in the child process environment. Legacy standalone `STORE_API_TOKEN` configuration remains supported when managed mode is not enabled. See [managed local setup](https://github.com/lambdawalker/ds.names.orchestrator/blob/main/docs/local-services.md).

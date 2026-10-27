@@ -29,22 +29,24 @@
     "check:package": "node scripts/check-package.mjs"
   },
   "dependencies": {
-    "zod": "4.6.7",
-    "@modelcontextprotocol/server": "2.4.0",
     "@modelcontextprotocol/client": "2.4.0",
+    "@modelcontextprotocol/server": "2.4.0",
     "neo4j-driver": "6.2.0",
-    "turndown": "7.2.4"
+    "turndown": "7.2.4",
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
   },
   "devDependencies": {
-    "typescript": "7.0.2",
-    "vitest": "5.0.5",
     "@types/node": "^24.0.0",
-    "@types/turndown": "^5.0.0"
+    "@types/turndown": "^5.0.0",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
   },
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "config.default.yaml"
   ],
   "bin": {
     "names-research-store-mcp": "dist/mcp.js"

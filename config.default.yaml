@@ -1,0 +1,9 @@
+# No credentials belong in this file.
+host: 127.0.0.1
+port: 4318
+dataDir: data
+# Optional graph connection; password is supplied through the process environment.
+# graph:
+#   uri: bolt://127.0.0.1:7687
+#   user: neo4j
+#   database: neo4j
