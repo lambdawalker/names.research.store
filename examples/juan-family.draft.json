@@ -1,0 +1,1761 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "juan-family-draft",
+  "input": {
+    "name": "Juan",
+    "language": "es"
+  },
+  "coverage": {
+    "status": "review_required",
+    "searched_sources": [],
+    "notes": [
+      "Transcribed from the user draft. No linguistic claims have been independently checked.",
+      "The supplied Hungarian classification of Jánosné needs review; its form kind is unknown.",
+      "Usage groups do not establish historical transmission paths or complete coverage."
+    ]
+  },
+  "sources": [
+    {
+      "id": "user-draft",
+      "provider": "user_supplied",
+      "upstream_source": "user_supplied",
+      "retrieved_at": "2026-10-26T00:00:00Z",
+      "public_reuse": "unknown"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "draft-input",
+      "source_id": "user-draft",
+      "locator": "conversation:user-provided-draft",
+      "note": "Provenance of the supplied draft only; not independent historical evidence. Timestamp is date-level bookkeeping."
+    }
+  ],
+  "forms": [
+    {
+      "id": "ar-male-1",
+      "spelling": "يُوحَنَّا",
+      "language": {
+        "code": "ar",
+        "name": "Arabic"
+      },
+      "script": "Arab",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Yūḥannā"
+        }
+      ]
+    },
+    {
+      "id": "hy-male-1",
+      "spelling": "Հովհաննես",
+      "language": {
+        "code": "hy",
+        "name": "Armenian"
+      },
+      "script": "Armn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Hovhannes"
+        }
+      ]
+    },
+    {
+      "id": "eu-male-1",
+      "spelling": "Joanes",
+      "language": {
+        "code": "eu",
+        "name": "Basque"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "bg-male-1",
+      "spelling": "Йоан",
+      "language": {
+        "code": "bg",
+        "name": "Bulgarian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Yoan"
+        }
+      ]
+    },
+    {
+      "id": "bg-male-2",
+      "spelling": "Иван",
+      "language": {
+        "code": "bg",
+        "name": "Bulgarian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ivan"
+        }
+      ]
+    },
+    {
+      "id": "ca-male-1",
+      "spelling": "Joan",
+      "language": {
+        "code": "ca",
+        "name": "Catalan"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "cs-male-1",
+      "spelling": "Jan",
+      "language": {
+        "code": "cs",
+        "name": "Czech"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "da-male-1",
+      "spelling": "Johan",
+      "language": {
+        "code": "da",
+        "name": "Danish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "da-male-2",
+      "spelling": "Hans",
+      "language": {
+        "code": "da",
+        "name": "Danish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "nl-male-1",
+      "spelling": "Jan",
+      "language": {
+        "code": "nl",
+        "name": "Dutch"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "nl-male-2",
+      "spelling": "Johan",
+      "language": {
+        "code": "nl",
+        "name": "Dutch"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "en-female-1",
+      "spelling": "Joanna",
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "en-female-2",
+      "spelling": "Joan",
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "en-male-1",
+      "spelling": "John",
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "en-male-2",
+      "spelling": "Jack",
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "en-male-3",
+      "spelling": "Johnny",
+      "language": {
+        "code": "en",
+        "name": "English"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "et-male-1",
+      "spelling": "Jaan",
+      "language": {
+        "code": "et",
+        "name": "Estonian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "fi-male-1",
+      "spelling": "Juhani",
+      "language": {
+        "code": "fi",
+        "name": "Finnish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "fi-male-2",
+      "spelling": "Janne",
+      "language": {
+        "code": "fi",
+        "name": "Finnish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "fr-female-1",
+      "spelling": "Jeanne",
+      "language": {
+        "code": "fr",
+        "name": "French"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "fr-male-1",
+      "spelling": "Jean",
+      "language": {
+        "code": "fr",
+        "name": "French"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "ka-male-1",
+      "spelling": "იოანე",
+      "language": {
+        "code": "ka",
+        "name": "Georgian"
+      },
+      "script": "Geor",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ioane"
+        }
+      ]
+    },
+    {
+      "id": "de-female-1",
+      "spelling": "Johanna",
+      "language": {
+        "code": "de",
+        "name": "German"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "de-male-1",
+      "spelling": "Johann",
+      "language": {
+        "code": "de",
+        "name": "German"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "de-male-2",
+      "spelling": "Hans",
+      "language": {
+        "code": "de",
+        "name": "German"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "el-female-1",
+      "spelling": "Ιωάννα",
+      "language": {
+        "code": "el",
+        "name": "Greek"
+      },
+      "script": "Grek",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ioánna"
+        }
+      ]
+    },
+    {
+      "id": "el-male-1",
+      "spelling": "Ιωάννης",
+      "language": {
+        "code": "el",
+        "name": "Greek"
+      },
+      "script": "Grek",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ioánnis"
+        }
+      ]
+    },
+    {
+      "id": "el-male-2",
+      "spelling": "Γιάννης",
+      "language": {
+        "code": "el",
+        "name": "Greek"
+      },
+      "script": "Grek",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Giánnis"
+        }
+      ]
+    },
+    {
+      "id": "hu-female-1",
+      "spelling": "Jánosné",
+      "language": {
+        "code": "hu",
+        "name": "Hungarian"
+      },
+      "script": "Latn",
+      "kind": "unknown",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "hu-male-1",
+      "spelling": "János",
+      "language": {
+        "code": "hu",
+        "name": "Hungarian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "is-female-1",
+      "spelling": "Jóhanna",
+      "language": {
+        "code": "is",
+        "name": "Icelandic"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "is-male-1",
+      "spelling": "Jón",
+      "language": {
+        "code": "is",
+        "name": "Icelandic"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "ga-female-1",
+      "spelling": "Siobhán",
+      "language": {
+        "code": "ga",
+        "name": "Irish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "ga-male-1",
+      "spelling": "Seán",
+      "language": {
+        "code": "ga",
+        "name": "Irish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "it-female-1",
+      "spelling": "Giovanna",
+      "language": {
+        "code": "it",
+        "name": "Italian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "it-male-1",
+      "spelling": "Giovanni",
+      "language": {
+        "code": "it",
+        "name": "Italian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "la-female-1",
+      "spelling": "Iohanna",
+      "language": {
+        "code": "la",
+        "name": "Latin"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "la-male-1",
+      "spelling": "Iohannes",
+      "language": {
+        "code": "la",
+        "name": "Latin"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "no-female-1",
+      "spelling": "Johanne",
+      "language": {
+        "code": "no",
+        "name": "Norwegian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "no-male-1",
+      "spelling": "Johan",
+      "language": {
+        "code": "no",
+        "name": "Norwegian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "no-male-2",
+      "spelling": "Jan",
+      "language": {
+        "code": "no",
+        "name": "Norwegian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "pl-female-1",
+      "spelling": "Joanna",
+      "language": {
+        "code": "pl",
+        "name": "Polish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "pl-male-1",
+      "spelling": "Jan",
+      "language": {
+        "code": "pl",
+        "name": "Polish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "pt-female-1",
+      "spelling": "Joana",
+      "language": {
+        "code": "pt",
+        "name": "Portuguese"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "pt-male-1",
+      "spelling": "João",
+      "language": {
+        "code": "pt",
+        "name": "Portuguese"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "ro-female-1",
+      "spelling": "Ioana",
+      "language": {
+        "code": "ro",
+        "name": "Romanian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "ro-male-1",
+      "spelling": "Ion",
+      "language": {
+        "code": "ro",
+        "name": "Romanian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "ru-female-1",
+      "spelling": "Иоанна",
+      "language": {
+        "code": "ru",
+        "name": "Russian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ioanna"
+        }
+      ]
+    },
+    {
+      "id": "ru-male-1",
+      "spelling": "Иоанн",
+      "language": {
+        "code": "ru",
+        "name": "Russian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ioann"
+        }
+      ]
+    },
+    {
+      "id": "ru-male-2",
+      "spelling": "Иван",
+      "language": {
+        "code": "ru",
+        "name": "Russian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ivan"
+        }
+      ]
+    },
+    {
+      "id": "gd-female-1",
+      "spelling": "Seònaid",
+      "language": {
+        "code": "gd",
+        "name": "Scottish Gaelic"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "gd-male-1",
+      "spelling": "Iain",
+      "language": {
+        "code": "gd",
+        "name": "Scottish Gaelic"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "sr-male-1",
+      "spelling": "Јован",
+      "language": {
+        "code": "sr",
+        "name": "Serbian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Jovan"
+        }
+      ]
+    },
+    {
+      "id": "sr-male-2",
+      "spelling": "Иван",
+      "language": {
+        "code": "sr",
+        "name": "Serbian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ivan"
+        }
+      ]
+    },
+    {
+      "id": "sk-male-1",
+      "spelling": "Ján",
+      "language": {
+        "code": "sk",
+        "name": "Slovak"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "sl-male-1",
+      "spelling": "Janez",
+      "language": {
+        "code": "sl",
+        "name": "Slovenian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "sl-male-2",
+      "spelling": "Ivan",
+      "language": {
+        "code": "sl",
+        "name": "Slovenian"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "es-female-1",
+      "spelling": "Juana",
+      "language": {
+        "code": "es",
+        "name": "Spanish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "es-male-1",
+      "spelling": "Juan",
+      "language": {
+        "code": "es",
+        "name": "Spanish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "sv-female-1",
+      "spelling": "Johanna",
+      "language": {
+        "code": "sv",
+        "name": "Swedish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "sv-male-1",
+      "spelling": "Johan",
+      "language": {
+        "code": "sv",
+        "name": "Swedish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "sv-male-2",
+      "spelling": "Janne",
+      "language": {
+        "code": "sv",
+        "name": "Swedish"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "uk-female-1",
+      "spelling": "Іоанна",
+      "language": {
+        "code": "uk",
+        "name": "Ukrainian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ioanna"
+        }
+      ]
+    },
+    {
+      "id": "uk-male-1",
+      "spelling": "Іоан",
+      "language": {
+        "code": "uk",
+        "name": "Ukrainian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ioan"
+        }
+      ]
+    },
+    {
+      "id": "uk-male-2",
+      "spelling": "Іван",
+      "language": {
+        "code": "uk",
+        "name": "Ukrainian"
+      },
+      "script": "Cyrl",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Ivan"
+        }
+      ]
+    },
+    {
+      "id": "cy-female-1",
+      "spelling": "Siân",
+      "language": {
+        "code": "cy",
+        "name": "Welsh"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "cy-male-1",
+      "spelling": "Ioan",
+      "language": {
+        "code": "cy",
+        "name": "Welsh"
+      },
+      "script": "Latn",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": []
+    },
+    {
+      "id": "root-he-1",
+      "spelling": "יְהוֹחָנָן",
+      "language": {
+        "code": "he",
+        "name": "Hebrew"
+      },
+      "script": "Hebr",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Yəhōḥānān"
+        }
+      ]
+    },
+    {
+      "id": "root-he-2",
+      "spelling": "יוֹחָנָן",
+      "language": {
+        "code": "he",
+        "name": "Hebrew"
+      },
+      "script": "Hebr",
+      "kind": "given_name",
+      "reconstructed": false,
+      "transliterations": [
+        {
+          "text": "Yōḥānān"
+        }
+      ]
+    }
+  ],
+  "origins": [
+    {
+      "id": "origin-draft",
+      "root_form_id": "root-he-1",
+      "original_variation_ids": [
+        "root-he-2",
+        "root-he-1"
+      ],
+      "meaning": "Yahweh is gracious",
+      "meaning_language": "en",
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    }
+  ],
+  "relationships": [],
+  "usages": [
+    {
+      "id": "usage-ar-male-1",
+      "form_id": "ar-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-hy-male-1",
+      "form_id": "hy-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-eu-male-1",
+      "form_id": "eu-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-bg-male-1",
+      "form_id": "bg-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-bg-male-2",
+      "form_id": "bg-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ca-male-1",
+      "form_id": "ca-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-cs-male-1",
+      "form_id": "cs-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-da-male-1",
+      "form_id": "da-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-da-male-2",
+      "form_id": "da-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-nl-male-1",
+      "form_id": "nl-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-nl-male-2",
+      "form_id": "nl-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-en-female-1",
+      "form_id": "en-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-en-female-2",
+      "form_id": "en-female-2",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-en-male-1",
+      "form_id": "en-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-en-male-2",
+      "form_id": "en-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-en-male-3",
+      "form_id": "en-male-3",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-et-male-1",
+      "form_id": "et-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-fi-male-1",
+      "form_id": "fi-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-fi-male-2",
+      "form_id": "fi-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-fr-female-1",
+      "form_id": "fr-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-fr-male-1",
+      "form_id": "fr-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ka-male-1",
+      "form_id": "ka-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-de-female-1",
+      "form_id": "de-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-de-male-1",
+      "form_id": "de-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-de-male-2",
+      "form_id": "de-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-el-female-1",
+      "form_id": "el-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-el-male-1",
+      "form_id": "el-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-el-male-2",
+      "form_id": "el-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-hu-female-1",
+      "form_id": "hu-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-hu-male-1",
+      "form_id": "hu-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-is-female-1",
+      "form_id": "is-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-is-male-1",
+      "form_id": "is-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ga-female-1",
+      "form_id": "ga-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ga-male-1",
+      "form_id": "ga-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-it-female-1",
+      "form_id": "it-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-it-male-1",
+      "form_id": "it-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-la-female-1",
+      "form_id": "la-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-la-male-1",
+      "form_id": "la-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-no-female-1",
+      "form_id": "no-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-no-male-1",
+      "form_id": "no-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-no-male-2",
+      "form_id": "no-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-pl-female-1",
+      "form_id": "pl-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-pl-male-1",
+      "form_id": "pl-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-pt-female-1",
+      "form_id": "pt-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-pt-male-1",
+      "form_id": "pt-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ro-female-1",
+      "form_id": "ro-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ro-male-1",
+      "form_id": "ro-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ru-female-1",
+      "form_id": "ru-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ru-male-1",
+      "form_id": "ru-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-ru-male-2",
+      "form_id": "ru-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-gd-female-1",
+      "form_id": "gd-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-gd-male-1",
+      "form_id": "gd-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sr-male-1",
+      "form_id": "sr-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sr-male-2",
+      "form_id": "sr-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sk-male-1",
+      "form_id": "sk-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sl-male-1",
+      "form_id": "sl-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sl-male-2",
+      "form_id": "sl-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-es-female-1",
+      "form_id": "es-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-es-male-1",
+      "form_id": "es-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sv-female-1",
+      "form_id": "sv-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sv-male-1",
+      "form_id": "sv-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-sv-male-2",
+      "form_id": "sv-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-uk-female-1",
+      "form_id": "uk-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-uk-male-1",
+      "form_id": "uk-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-uk-male-2",
+      "form_id": "uk-male-2",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-cy-female-1",
+      "form_id": "cy-female-1",
+      "genders": [
+        "female"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    },
+    {
+      "id": "usage-cy-male-1",
+      "form_id": "cy-male-1",
+      "genders": [
+        "male"
+      ],
+      "countries": [],
+      "status": "candidate",
+      "evidence_ids": [
+        "draft-input"
+      ]
+    }
+  ],
+  "notable_bearers": [],
+  "statistics": []
+}
