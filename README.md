@@ -191,3 +191,5 @@ See [the design](docs/superpowers/specs/2026-10-26-storage-service-design.md) an
 [implementation plan](docs/superpowers/plans/2026-10-26-storage-service.md).
 
 Software: MIT. Source documents and datasets retain their own licensing terms.
+
+Root research orchestration persistence, origin subjects, and exact canonical identity lookup are documented in [Root research tasks](docs/root-research-tasks.md). Validation-only consumers can import `@lambdawalker/names-research-store/contracts`; this entry exports domain schemas, task schemas, inputs, and form identity helpers without SQLite, HTTP, or Neo4j imports.

@@ -2,10 +2,10 @@ import { DatabaseSync } from 'node:sqlite';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ResearchSchema } from './domain/research.js';
-import { formIdentity, normalizeSearchKey } from './domain/forms.js';
+import { FormSchema, formIdentity, normalizeSearchKey } from './domain/forms.js';
 import { canonicalJson, normalizeDocument, sha256 } from './documents.js';
 import { CacheKeySchema, CacheWriteSchema, DocumentInputSchema, FindingSchema, FindFormsSchema,
-  FragmentSchema, ReadDocumentSchema, ProjectionFindingSchema, collections, type Collection, type Finding } from './inputs.js';
+  FragmentSchema, ReadDocumentSchema, ProjectionFindingSchema, SaveResearchTaskSchema, GetResearchTaskSchema, type ResearchTaskReceipt, collections, type Collection, type Finding } from './inputs.js';
 
 export class StoreError extends Error {
   constructor(public status: number, message: string) { super(message); }
@@ -32,7 +32,9 @@ export class Store {
       CREATE TABLE IF NOT EXISTS documents(id TEXT PRIMARY KEY,metadata TEXT NOT NULL,markdown_hash TEXT NOT NULL,retained INTEGER NOT NULL);
       CREATE TABLE IF NOT EXISTS fragments(id TEXT PRIMARY KEY,document_id TEXT NOT NULL,start INTEGER NOT NULL,end INTEGER NOT NULL,sha256 TEXT NOT NULL);
       CREATE TABLE IF NOT EXISTS cache(key TEXT PRIMARY KEY,value TEXT NOT NULL,created_at INTEGER NOT NULL,expires_at INTEGER NOT NULL);
-      CREATE INDEX IF NOT EXISTS cache_expiry ON cache(expires_at);`);
+      CREATE INDEX IF NOT EXISTS cache_expiry ON cache(expires_at);
+      CREATE TABLE IF NOT EXISTS research_tasks(id TEXT PRIMARY KEY,receipt TEXT NOT NULL);
+      CREATE TABLE IF NOT EXISTS task_writes(write_id TEXT PRIMARY KEY,digest TEXT NOT NULL,receipt TEXT NOT NULL);`);
   }
   close() { this.db.close(); }
   private transaction<T>(fn: () => T): T {
@@ -90,6 +92,7 @@ export class Store {
         for (const claim of finding[key]) {
           claim.evidence_ids.forEach(id => include('evidence', id));
           if ('root_form_id' in claim) {
+            if (claim.subject_form_id) include('forms', claim.subject_form_id);
             include('forms', claim.root_form_id); claim.original_variation_ids.forEach(id => include('forms', id));
           }
           if ('from_form_id' in claim) { include('forms', claim.from_form_id); include('forms', claim.to_form_id); }
@@ -120,6 +123,38 @@ export class Store {
       return this.findingReceipt(id);
     });
   }
+  saveResearchTask(input: unknown): ResearchTaskReceipt {
+    const data = SaveResearchTaskSchema.parse(input);
+    const payload = canonicalJson(data);
+    if (Buffer.byteLength(payload) > 65536) throw new StoreError(413, 'Task request exceeds 64 KiB');
+    if (Buffer.byteLength(canonicalJson(data.task.checkpoint)) > 32768) throw new StoreError(413, 'Task checkpoint exceeds 32 KiB');
+    const digest = sha256(payload);
+    return this.transaction(() => {
+      const write = this.db.prepare('SELECT digest,receipt FROM task_writes WHERE write_id=?').get(data.write_id) as {digest:string;receipt:string}|undefined;
+      if (write) {
+        if (write.digest !== digest) throw new StoreError(409, 'Write ID/payload conflict');
+        return JSON.parse(write.receipt) as ResearchTaskReceipt;
+      }
+      const existing = this.getResearchTask({task_id:data.task.id});
+      if ((existing?.revision ?? 0) !== data.expected_revision) throw new StoreError(409, 'Task revision conflict');
+      if (existing && (canonicalJson(existing.task.input) !== canonicalJson(data.task.input) || existing.task.phase !== data.task.phase || existing.task.id !== data.task.id)) {
+        throw new StoreError(409, 'Task input, id and phase are immutable');
+      }
+      for (const id of data.task.finding_ids) {
+        if (!this.db.prepare('SELECT id FROM findings WHERE id=?').get(id)) throw new StoreError(400, 'Task finding does not exist in the journal: ' + id);
+      }
+      const receipt: ResearchTaskReceipt = {task:data.task,revision:data.expected_revision + 1,updated_at:new Date(this.clock()).toISOString()};
+      const body = canonicalJson(receipt);
+      this.db.prepare('INSERT INTO research_tasks(id,receipt) VALUES(?,?) ON CONFLICT(id) DO UPDATE SET receipt=excluded.receipt').run(data.task.id,body);
+      this.db.prepare('INSERT INTO task_writes(write_id,digest,receipt) VALUES(?,?,?)').run(data.write_id,digest,body);
+      return receipt;
+    });
+  }
+  getResearchTask(input: unknown): ResearchTaskReceipt | null {
+    const {task_id} = GetResearchTaskSchema.parse(input);
+    const row = this.db.prepare('SELECT receipt FROM research_tasks WHERE id=?').get(task_id) as {receipt:string}|undefined;
+    return row ? JSON.parse(row.receipt) as ResearchTaskReceipt : null;
+  }
   findingReceipt(id: string) {
     const row = this.db.prepare('SELECT state FROM outbox WHERE finding_id=?').get(id) as {state:string}|undefined;
     if (!row) throw new StoreError(404, 'Finding not found');
@@ -129,6 +164,11 @@ export class Store {
     const count = (table: string) => Number((this.db.prepare(`SELECT count(*) AS count FROM ${table}`).get() as {count:number}).count);
     return {findings:count('findings'),documents:count('documents'),
       pending:Number((this.db.prepare("SELECT count(*) AS count FROM outbox WHERE state='pending'").get() as {count:number}).count)};
+  }
+  getFormByIdentity(input: unknown) {
+    const identity = formIdentity(FormSchema.parse(input));
+    const row = this.db.prepare("SELECT body FROM entities WHERE kind='forms' AND identity=?").get(identity) as {body:string}|undefined;
+    return row ? FormSchema.parse(JSON.parse(row.body)) : null;
   }
   findForms(input: unknown) {
     const {query,language,limit}=FindFormsSchema.parse(input);

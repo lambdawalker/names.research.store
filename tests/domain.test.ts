@@ -83,6 +83,14 @@ describe('evidence and references', () => {
       { ...claim, form_id: 'it-giovanni', genders: ['male'], countries: [], evidence_ids: ['missing'] },
     ] }).success).toBe(false);
   });
+  it('accepts optional origin subjects and validates their form references', () => {
+    const origin={...claim,root_form_id:'it-giovanni',original_variation_ids:[]};
+    expect(ResearchSchema.safeParse({...record(),origins:[origin]}).success).toBe(true);
+    expect(ResearchSchema.safeParse({...record(),origins:[{...origin,subject_form_id:'es-giovanni'}]}).success).toBe(true);
+    const invalid=ResearchSchema.safeParse({...record(),origins:[{...origin,subject_form_id:'missing'}]});
+    expect(invalid.success).toBe(false);
+    if(!invalid.success)expect(invalid.error.issues).toEqual(expect.arrayContaining([expect.objectContaining({path:['origins',0,'subject_form_id']})]));
+  });
   it('retains multiple, conflicting origins', () => {
     const parsed = ResearchSchema.parse({ ...record(), origins: [
       { ...claim, id: 'root-a', root_form_id: 'it-giovanni', original_variation_ids: [] },

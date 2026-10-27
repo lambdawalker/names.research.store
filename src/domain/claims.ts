@@ -12,6 +12,7 @@ export const ClaimSchema = z.strictObject({
 });
 export const OriginSchema = ClaimSchema.safeExtend({
   root_form_id: Id,
+  subject_form_id: Id.optional(),
   original_variation_ids: z.array(Id),
   meaning: Text.optional(),
   meaning_language: Text.optional(),

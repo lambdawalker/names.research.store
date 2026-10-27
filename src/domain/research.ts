@@ -58,6 +58,7 @@ export const ResearchSchema = z.strictObject({
   if (claimIds.length !== new Set(claimIds).size) issue([], 'Claim IDs must be unique across all claim collections');
   record.origins.forEach((claim, i) => {
     checkRef(claim.root_form_id, formIds, ['origins', i, 'root_form_id']);
+    if (claim.subject_form_id) checkRef(claim.subject_form_id, formIds, ['origins', i, 'subject_form_id']);
     unique(claim.original_variation_ids, ['origins', i, 'original_variation_ids']);
     claim.original_variation_ids.forEach((id, j) => checkRef(id, formIds, ['origins', i, 'original_variation_ids', j]));
     if (claim.meaning && !claim.meaning_language) issue(['origins', i, 'meaning_language'], 'Specify the language of the meaning translation');
