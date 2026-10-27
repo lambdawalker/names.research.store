@@ -45,5 +45,8 @@
     "dist",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "bin": {
+    "names-research-store-mcp": "dist/mcp.js"
+  }
 }

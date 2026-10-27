@@ -140,6 +140,10 @@ untrusted input and sanitize rendering if you build a UI.
 
 ## MCP
 
+The compiled adapter is also available as `names-research-store-mcp` after package installation, or directly through `node /absolute/path/names.research.store/dist/mcp.js`. It connects to the running HTTP service; it does not open a second SQLite writer. Configure `STORE_API_URL` and `STORE_API_TOKEN` in the MCP server's own environment. Reads and validated writes share the same operation contracts as HTTP, including findings, documents/fragments, cache, form lookup, graph traversal and durable research tasks.
+
+Responses are streamed with a 128 KiB input cap and a 128 KiB complete MCP-envelope cap. HTTP fetch/body reads use a 15-second deadline and the MCP caller's cancellation signal. Tokens reflected by an upstream response are filtered before and after JSON decoding. Reduce document/traversal page sizes when a result exceeds the envelope cap. Cancellation is not a database rollback: a write may have been admitted before a response was interrupted; retry findings/tasks with their existing idempotency/write identifiers.
+
 Configure your MCP host to run the compiled adapter with only the API URL and
 token. It does not need Neo4j credentials or filesystem access to the store:
 
