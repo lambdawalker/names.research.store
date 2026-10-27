@@ -25,7 +25,8 @@
     "start": "node --env-file-if-exists=.env dist/main.js",
     "mcp": "node --env-file-if-exists=.env dist/mcp.js",
     "validate": "node dist/cli/validate.js",
-    "summarize": "node dist/cli/summarize.js"
+    "summarize": "node dist/cli/summarize.js",
+    "check:package": "node scripts/check-package.mjs"
   },
   "dependencies": {
     "zod": "4.6.7",
@@ -39,5 +40,10 @@
     "vitest": "5.0.5",
     "@types/node": "^24.0.0",
     "@types/turndown": "^5.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }
