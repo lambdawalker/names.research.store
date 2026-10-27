@@ -42,6 +42,7 @@ export class Neo4jGraph implements GraphSink {
             for(const evidenceId of claim.evidence_ids) await connect(key,'evidence:'+evidenceId,'evidence');
             if('root_form_id' in claim) {
               await connect(key,'forms:'+claim.root_form_id,'root');
+              if(claim.subject_form_id) await connect(key,'forms:'+claim.subject_form_id,'subject');
               for(const form of claim.original_variation_ids) await connect(key,'forms:'+form,'variation');
             }
             if('form_id' in claim) await connect(key,'forms:'+claim.form_id,'form');

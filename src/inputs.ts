@@ -51,3 +51,23 @@ export const TraverseSchema = z.strictObject({
   form_id: Id, depth: z.number().int().min(1).max(6).default(3),
   limit: z.number().int().min(1).max(100).default(25),
 });
+
+/** Durable orchestration state; finding evidence remains in the separate journal. */
+export const ResearchTaskSchema = z.strictObject({
+  id: Id,
+  input: z.strictObject({ name: Text.max(256), language: Text.max(128).optional() }),
+  phase: z.literal('root'),
+  status: z.enum(['pending', 'running', 'review_required', 'unresolved', 'budget_stopped', 'failed']),
+  checkpoint: z.json(),
+  finding_ids: z.array(z.string().regex(/^[a-f0-9]{64}$/)).max(100),
+  session_ids: z.array(Id).max(100),
+  stats: z.strictObject({ sessions: z.number().int().nonnegative(), model_calls: z.number().int().nonnegative(), tool_calls: z.number().int().nonnegative() }),
+  note: Text.max(2048).optional(),
+});
+export const SaveResearchTaskSchema = z.strictObject({
+  task: ResearchTaskSchema, expected_revision: z.number().int().nonnegative(), write_id: Id.max(128),
+});
+export const GetResearchTaskSchema = z.strictObject({ task_id: Id });
+export type ResearchTask = z.infer<typeof ResearchTaskSchema>;
+export interface ResearchTaskReceipt { task: ResearchTask; revision: number; updated_at: string }
+export const GetFormByIdentitySchema = FormSchema;

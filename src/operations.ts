@@ -1,10 +1,12 @@
 import { z } from 'zod';
 import { CacheKeySchema,CacheWriteSchema,DocumentInputSchema,FindingSchema,FindFormsSchema,
-  FragmentSchema,ReadDocumentSchema,TraverseSchema,collections,type Collection } from './inputs.js';
+  FragmentSchema,ReadDocumentSchema,TraverseSchema,SaveResearchTaskSchema,GetResearchTaskSchema,GetFormByIdentitySchema,collections,type Collection } from './inputs.js';
 import { Store, StoreError } from './store.js';
 import type { Neo4jGraph } from './graph.js';
 const hash=z.string().regex(/^[a-f0-9]{64}$/);
 export const operationSchemas={
+  get_form_by_identity:GetFormByIdentitySchema,
+  save_research_task:SaveResearchTaskSchema,get_research_task:GetResearchTaskSchema,
   record_finding:FindingSchema,store_document:DocumentInputSchema,read_document:ReadDocumentSchema,
   create_fragment:FragmentSchema,get_fragment:z.strictObject({fragment_id:hash}),
   cache_search:CacheWriteSchema,get_cached_search:CacheKeySchema,prune_cache:z.strictObject({}),
@@ -19,6 +21,8 @@ export async function operate(store:Store,name:OperationName,input:unknown,graph
   const data=operationSchemas[name].parse(input);
   const requireGraph=()=>{if(!graph)throw new StoreError(503,'Graph is not configured; finding admission and document/cache storage remain available');return graph;};
   switch(name){
+    case 'save_research_task':return store.saveResearchTask(data);
+    case 'get_research_task':return store.getResearchTask(data);
     case 'record_finding':return store.recordFinding(data);
     case 'store_document':return store.storeDocument(data);
     case 'read_document':return store.readDocument(data);
@@ -27,6 +31,7 @@ export async function operate(store:Store,name:OperationName,input:unknown,graph
     case 'cache_search':return store.cacheSearch(data);
     case 'get_cached_search':return store.getCachedSearch(data);
     case 'prune_cache':return store.pruneCache();
+    case 'get_form_by_identity':return store.getFormByIdentity(data);
     case 'find_forms':return store.findForms(data);
     case 'get_ancestry':return requireGraph().traverse(data,'ancestry');
     case 'get_descendants':return requireGraph().traverse(data,'descendants');
