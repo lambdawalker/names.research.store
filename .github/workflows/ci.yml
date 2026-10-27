@@ -1,0 +1,34 @@
+name: Storage service checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      neo4j:
+        image: neo4j:5.26-community
+        env:
+          NEO4J_AUTH: neo4j/synthetic-ci-password
+        ports:
+          - 7687:7687
+        options: >-
+          --health-cmd "cypher-shell -u neo4j -p synthetic-ci-password 'RETURN 1'"
+          --health-interval 10s
+          --health-timeout 10s
+          --health-retries 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+        env:
+          TEST_NEO4J_URI: bolt://127.0.0.1:7687
+          TEST_NEO4J_PASSWORD: synthetic-ci-password
+      - run: npm run typecheck
+      - run: npm run validate -- examples/juan-family.draft.json

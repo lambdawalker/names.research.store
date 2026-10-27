@@ -1,0 +1,14 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+data/
+output/
+.dsh/
+*.vault
+*.vault.*
+
+.superpowers/
